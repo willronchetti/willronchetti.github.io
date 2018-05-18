@@ -89,3 +89,4 @@ Check out the [CONTRIBUTING document](CONTRIBUTING.md) in the root of the reposi
 ## Copyright and license
 Code copyright 2017 Materialize. Code released under the MIT license.
 # Website 
+This is the source for my personal website, built on top of the Materialize CSS template.
