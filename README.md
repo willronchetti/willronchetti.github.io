@@ -1,3 +1,6 @@
+# Website 
+This is the source for my personal website, built on top of the Materialize CSS template. Below you can find the README for the Materialize CSS template, without which this site wouldn't be possible!
+
 <p align="center">
   <a href="http://materializecss.com/">
     <img src="http://materializecss.com/res/materialize.svg" width="150">
@@ -88,5 +91,3 @@ Check out the [CONTRIBUTING document](CONTRIBUTING.md) in the root of the reposi
 
 ## Copyright and license
 Code copyright 2017 Materialize. Code released under the MIT license.
-# Website 
-This is the source for my personal website, built on top of the Materialize CSS template.
