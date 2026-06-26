@@ -1,169 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="fsqjfqJuJ-EmX72QLYhUGze-leS01aYSm423zP2tuAg" />
-  <link rel="icon" href="images/LiteTech.png">
-  <title>Will Ronchetti</title>
+  <meta name="description" content="William Ronchetti — back-end and infrastructure engineer building secure, scalable AWS data platforms in Python at Novo Nordisk and Harvard Medical School." />
+  <meta name="color-scheme" content="dark" />
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- Open Graph -->
+  <meta property="og:title" content="William Ronchetti — Infrastructure & Back-End Engineer" />
+  <meta property="og:description" content="7+ years building secure, scalable AWS data platforms in Python. Novo Nordisk · Harvard Medical School." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://willronchetti.github.io" />
+
+  <title>William Ronchetti — Infrastructure & Back-End Engineer</title>
+
+  <!-- Inline SVG favicon: terminal prompt -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Cpath d='M8 11l5 5-5 5M16 21h8' stroke='%237ee787' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <img id="logo-container" src="images/LiteTech.png" class="brand-logo" style="width:70px"></img>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSeETe8kEPutE47sC7eB-3hOJnUHouyw2TD79b-WupXAZlv7xw/viewform?usp=sf_link" target="_blank">Contact</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html">Home</a></li>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Home">
+        <span class="nav__prompt">&gt;_</span>
+        <span class="nav__brand-text">william<span class="muted">@</span>infra</span>
+      </a>
+
+      <nav class="nav__links" id="nav-links" aria-label="Primary">
+        <a href="#about">about</a>
+        <a href="#experience">experience</a>
+        <a href="#work">work</a>
+        <a href="#community">community</a>
+        <a href="#contact">contact</a>
+        <a class="nav__resume" href="images/wrr_2026.pdf" target="_blank" rel="noopener">resume.pdf</a>
+      </nav>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="hero__inner">
+        <div class="terminal" role="presentation">
+          <div class="terminal__bar">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+            <span class="terminal__title">william@infra: ~</span>
+          </div>
+          <div class="terminal__body">
+            <p class="term-line"><span class="term-prompt">william@infra:~$</span> whoami</p>
+            <p class="term-out" id="typed"></p>
+            <p class="term-line term-line--delay"><span class="term-prompt">william@infra:~$</span> cat about.txt</p>
+          </div>
+        </div>
+
+        <h1 class="hero__name" id="hero-name">William Ronchetti</h1>
+        <p class="hero__tagline">Back-end &amp; infrastructure engineer. I build secure, scalable AWS data platforms that move petabytes.</p>
+        <p class="hero__meta">
+          <span aria-hidden="true">◦</span> Alexandria, VA
+          <span aria-hidden="true">◦</span> M.Eng. Computer Science, Cornell
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="images/wrr_2026.pdf" target="_blank" rel="noopener">Download résumé</a>
+          <a class="btn" href="https://github.com/willronchetti" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/william-ronchetti-569839121/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:wrr33@cornell.edu">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section reveal" id="about" aria-labelledby="about-h">
+      <div class="section__head">
+        <span class="section__num">01</span>
+        <h2 class="section__title" id="about-h">about</h2>
+      </div>
+      <div class="about">
+        <p>
+          I'm a back-end and infrastructure software engineer with <strong>7+ years</strong> building secure,
+          scalable AWS data platforms in Python. My work lives where research data meets production
+          infrastructure — turning organically grown systems into reproducible, audited, compliant platforms.
+        </p>
+        <p>
+          My strengths are infrastructure-as-code, API and database performance optimization, container-based
+          deployments, and observability — delivering <strong>FISMA-Moderate</strong> and <strong>GDPR-compliant</strong>
+          systems that have passed multiple independent security audits.
+        </p>
+        <ul class="stats">
+          <li><span class="stats__num">7+</span><span class="stats__label">years building<br>data platforms</span></li>
+          <li><span class="stats__num">PB</span><span class="stats__label">scale data<br>under management</span></li>
+          <li><span class="stats__num">5</span><span class="stats__label">peer-reviewed<br>publications</span></li>
+          <li><span class="stats__num">267</span><span class="stats__label">citations<br>across that work</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section reveal" id="experience" aria-labelledby="exp-h">
+      <div class="section__head">
+        <span class="section__num">02</span>
+        <h2 class="section__title" id="exp-h">experience</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="job">
+          <div class="job__head">
+            <h3 class="job__role">Data Product Engineer</h3>
+            <span class="job__when">Sept 2024 — Present</span>
+          </div>
+          <p class="job__org">Novo Nordisk <span class="muted">(via Kelly Services Global)</span> · Remote</p>
+          <ul class="job__points">
+            <li>Spearhead development of the <strong>Omics Platform</strong>, an internal AWS system managing petabytes of diverse omics data for dozens of research teams — both cataloguing and analysis.</li>
+            <li>Built a highly scalable ingestion pipeline on <strong>Lambda, Glue, and Batch</strong> for validation and transfer of raw data and discovery metadata across several dozen vendors/CROs.</li>
+            <li>Designed a metadata model for tracking diverse omics datasets using <strong>Parquet and Amazon Athena</strong>.</li>
+            <li>Review code and mentor a small team on software, cloud-engineering, and security best practices to ensure GDPR compliance.</li>
+          </ul>
+          <ul class="tags">
+            <li>AWS Lambda</li><li>Glue</li><li>Batch</li><li>Parquet</li><li>Athena</li><li>Python</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job__head">
+            <h3 class="job__role">Senior Software Engineer</h3>
+            <span class="job__when">Aug 2019 — Present</span>
+          </div>
+          <p class="job__org">Harvard Medical School — Dept. of Biomedical Informatics · Remote / Boston, MA</p>
+          <p class="job__note muted">Senior since 2022 (half-time since Jan 2025) — previously Software Engineer</p>
+          <ul class="job__points">
+            <li>Lead back-end development in Python for the <strong>CGAP, 4DN, and SMaHT</strong> data platforms, supporting petabytes of raw data and associated metadata.</li>
+            <li>Refactored complex, organically grown AWS infrastructure into reproducible <strong>infrastructure-as-code (CloudFormation)</strong>, achieving FISMA-Moderate compliance and passing multiple independent security audits.</li>
+            <li>Migrated the web platform from Apache on Elastic Beanstalk to <strong>Nginx on ECS Fargate</strong>, cutting compute costs by <strong>50%</strong> with configurable autoscaling.</li>
+            <li>Implemented observability with structured event logging via a <strong>Splunk HEC</strong> pipeline and container log shipping through FireLens / Fluent Bit.</li>
+            <li>Optimized Postgres and Elasticsearch query performance by resolving aggregation timeouts from large terms filters — <strong>50% faster</strong> responses.</li>
+          </ul>
+          <ul class="tags">
+            <li>CloudFormation</li><li>ECS Fargate</li><li>Nginx</li><li>PostgreSQL</li><li>Elasticsearch</li><li>Splunk</li><li>FISMA</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job__head">
+            <h3 class="job__role">Associate in Research <span class="muted">(part-time)</span></h3>
+            <span class="job__when">Feb 2019 — Present</span>
+          </div>
+          <p class="job__org">Duke University — Dept. of Electrical &amp; Computer Engineering · Durham, NC</p>
+          <ul class="job__points">
+            <li>Develop assignments for an advanced C++ course and improve introductory C programming assignments on Coursera; support students with C and Python coursework.</li>
+          </ul>
+        </li>
+
+        <li class="job">
+          <div class="job__head">
+            <h3 class="job__role">Teaching Assistant <span class="muted">(part-time)</span></h3>
+            <span class="job__when">Aug 2016 — Dec 2018</span>
+          </div>
+          <p class="job__org">Cornell University · Ithaca, NY</p>
+          <ul class="job__points">
+            <li>Taught Operating Systems (CS 4410/4411) and System Security (CS 5430/5431) with practicum sections; built and improved C autograders and graded exams.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Selected work / publications ===== -->
+    <section class="section reveal" id="work" aria-labelledby="work-h">
+      <div class="section__head">
+        <span class="section__num">03</span>
+        <h2 class="section__title" id="work-h">selected work</h2>
+      </div>
+      <p class="section__lead">
+        Co-author on <strong>5 peer-reviewed publications</strong> for data-platform and pipeline contributions, with
+        <strong>267 citations</strong>. Selected highlights:
+      </p>
+      <ul class="pubs">
+        <li class="pub">
+          <a href="https://www.nature.com/articles/s41586-025-09096-7" target="_blank" rel="noopener">
+            <span class="pub__title">The Somatic Mosaicism across Human Tissues Network</span>
+            <span class="pub__meta"><em>Nature</em> · 2025</span>
+          </a>
+        </li>
+        <li class="pub">
+          <a href="https://www.nature.com/articles/s41586-025-09890-3" target="_blank" rel="noopener">
+            <span class="pub__title">An integrated view of the structure and function of the human 4D nucleome</span>
+            <span class="pub__meta"><em>Nature</em> · 2025</span>
+          </a>
+        </li>
+        <li class="pub">
+          <a href="https://www.nature.com/articles/s41467-025-61712-2" target="_blank" rel="noopener">
+            <span class="pub__title">Joint, multifaceted genomic analysis enables diagnosis of diverse, ultra-rare monogenic presentations</span>
+            <span class="pub__meta"><em>Nature Communications</em> · 2025</span>
+          </a>
+        </li>
+        <li class="pub">
+          <a href="https://www.nature.com/articles/s41467-022-29697-4" target="_blank" rel="noopener">
+            <span class="pub__title">The 4D Nucleome Data Portal as a resource for searching and visualizing curated nucleomics data</span>
+            <span class="pub__meta"><em>Nature Communications</em> · 2022</span>
+          </a>
+        </li>
       </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center white-text text-lighten-2">William Ronchetti</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Software Engineer. Athlete. Cryptocurrency Enthusiast.</h5>
-        </div>
-        <div class="row center">
-          <a href="images/Ronchetti_William.pdf" target="_blank" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Resume</a>
-          <a href="https://www.linkedin.com/in/william-ronchetti-569839121/" target="_blank" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">LinkedIn</a>
-        </div>
-        <br><br>
-
+      <div class="section__head section__head--sub">
+        <h3 class="section__subtitle">stack</h3>
       </div>
-    </div>
-    <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Software Engineer</h5>
-
-            <p class="light">I have both a Bachelor of Arts and a Master of Engineering in Computer Science from Cornell University. I specialize in (Operating) Systems, Networking and Distributed Systems. I also have interests that include various aspects of data science, such as natural language processing and machine learning. Currently I am working as a Remote Research Assistant at Duke University in the ECE department.</p>
-          </div>
+      <div class="skills">
+        <div class="skill">
+          <h4 class="skill__cat">// languages</h4>
+          <p>Python · C/C++ · Java · OCaml · SQL</p>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">directions_run</i></h2>
-            <h5 class="center">Athlete</h5>
-
-            <p class="light">I've been a three sport athlete my entire life, running cross country, indoor and outdoor track in high school and at Cornell. I am still very much into living an active, healthy lifestyle.</p>
-          </div>
+        <div class="skill">
+          <h4 class="skill__cat">// infrastructure &amp; IaC</h4>
+          <p>CloudFormation · VPC · EC2 · ECS (Fargate) · ECR · Elastic Beanstalk · Lambda · Batch · Step Functions · API Gateway · Route 53 · Docker · Nginx · Apache</p>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">visibility_off</i></h2>
-            <h5 class="center">Cryptocurrency Enthusiast</h5>
-
-            <p class="light">I find cryptocurrencies like Bitcoin and Ethereum to be truly fascinating - they really changed the name of the game as far as distributed systems are concerned. I think these technologies are the way of the future, and a large portion of my interest is in researching and building systems to supplement that future.</p>
-          </div>
+        <div class="skill">
+          <h4 class="skill__cat">// data &amp; storage</h4>
+          <p>PostgreSQL (RDS) · Elasticsearch · DynamoDB · Amazon Athena · S3 · Parquet</p>
+        </div>
+        <div class="skill">
+          <h4 class="skill__cat">// observability &amp; CI/CD</h4>
+          <p>CloudWatch · Splunk (HEC) · Fluent Bit / FireLens · Sentry · GitHub Actions · Travis CI · ReadTheDocs</p>
+        </div>
+        <div class="skill">
+          <h4 class="skill__cat">// security</h4>
+          <p>AWS KMS · Secrets Manager · Security Hub · ACM · FISMA-Moderate · GDPR</p>
+        </div>
+        <div class="skill">
+          <h4 class="skill__cat">// scientific pipelines</h4>
+          <p>Nextflow · Seqera</p>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
-        </div>
+    <!-- ===== Community & athletics ===== -->
+    <section class="section reveal" id="community" aria-labelledby="comm-h">
+      <div class="section__head">
+        <span class="section__num">04</span>
+        <h2 class="section__title" id="comm-h">community &amp; athletics</h2>
       </div>
-    </div>
-    <div class="parallax"><img src="images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
+      <div class="cards">
+        <article class="card">
+          <h3 class="card__title">Coaching</h3>
+          <p>Assistant Cross-Country and Track &amp; Field coach at <strong>Arlington Public Schools (Yorktown)</strong> — helping the next generation of distance runners train, race, and stick with the sport.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Volunteering</h3>
+          <p>Volunteer with <strong>Virginia German Shepherd Rescue</strong> and the <strong>Lost Dog &amp; Cat Rescue Foundation</strong>, supporting fostering and adoption efforts.</p>
+        </article>
+        <article class="card">
+          <h3 class="card__title">Running</h3>
+          <p>Varsity Cross Country and Indoor &amp; Outdoor Track at <strong>Cornell</strong>. A lifelong endurance athlete — the same patience and consistency I bring to long-running systems work.</p>
+        </article>
+      </div>
+    </section>
 
-  <div class="container">
-    <div class="section">
+  </main>
 
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Me</h4>
-          <p class="left-align light">Please use the Google form on the nav bar at the top of the page to most easily get in contact with me. I'm also most reliably reached through email, wrr33 (at) Cornell (dot) edu. Feel free to drop an email as well, especially if I'm lagging behind getting back to you! You can also find me on LinkedIn <a href="https://www.linkedin.com/in/william-ronchetti-569839121/">here</a> and Github <a href="https://github.com/willronchetti">here</a>.</p>
+  <!-- ===== Footer / contact ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <div class="footer__cta">
+        <p class="term-prompt">william@infra:~$ ./contact --me</p>
+        <h2 class="footer__title">Let's build something durable.</h2>
+        <p class="footer__text">Open to back-end and infrastructure roles. The fastest way to reach me is email or LinkedIn.</p>
+        <div class="footer__links">
+          <a class="btn btn--primary" href="mailto:wrr33@cornell.edu">wrr33@cornell.edu</a>
+          <a class="btn" href="https://www.linkedin.com/in/william-ronchetti-569839121/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/willronchetti" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="images/wrr_2026.pdf" target="_blank" rel="noopener">Résumé</a>
         </div>
       </div>
 
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light"></h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Checkout My Work!</h5>
-          <p class="grey-text text-lighten-4">I've been a part of several highly successful projects, three of my most notable are mentioned below.
-          Some have active web links. Check them out!</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Web</h5>
-          <ul>
-            <li><a class="white-text" href="http://www.areyouboard.info">AreYouBoard?</a></li>
-            <li><a class="white-text" href="#!">EzraCoinL</a></li>
-            <li><a class="white-text" href="#!">LiteTrader</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Github</h5>
-          <ul>
-            <li><a class="white-text" href="https://github.com/willronchetti/areyouboard">Web Source for AreYouBoard?</a></li>
-            <li><a class="white-text" href="#!">Ask me for source!</a></li>
-            <li><a class="white-text" href="#!">Ask me for source!</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      <div class="footer__note">
+        <p class="muted">
+          <strong>On this site:</strong> the UI was designed and built with the help of AI tooling — a deliberate
+          experiment in augmenting my skills into a domain (front-end &amp; design) outside my day-to-day. The
+          engineering work it describes is entirely my own.
+        </p>
+        <p class="muted footer__colophon">
+          Hand-tuned static HTML/CSS/JS · no frameworks · served from GitHub Pages ·
+          <a href="https://github.com/willronchetti/willronchetti.github.io" target="_blank" rel="noopener">source</a>
+        </p>
       </div>
     </div>
   </footer>
 
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>
