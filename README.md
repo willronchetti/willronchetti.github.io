@@ -2,16 +2,17 @@
 
 Source for my personal site — [willronchetti.github.io](https://willronchetti.github.io).
 
-A single-page, terminal-inspired portfolio for a back-end / infrastructure engineer.
-Hand-tuned static **HTML / CSS / JS** — no frameworks, no build step. Committing to
-`master` deploys it directly via GitHub Pages.
+A single-page portfolio for a back-end / infrastructure engineer, styled as an
+**engineering schematic on drafting paper** — a warm grid, hairline rules, a data-pipeline
+diagram, and plate-numbered sections. Hand-tuned static **HTML / CSS / JS** — no frameworks,
+no build step. Committing to `master` deploys it directly via GitHub Pages.
 
 ## Structure
 
 ```
-index.html       # the whole site (hero, about, experience, work, community, contact)
-css/style.css    # design system: dark terminal theme, CSS custom properties, responsive
-js/main.js       # vanilla JS: mobile nav, hero typing effect, scroll-reveal
+index.html       # the whole site (hero, about, experience, work, education, off-hours, contact)
+css/style.css    # design system: drafting-paper theme, CSS custom properties, responsive
+js/main.js       # vanilla JS: mobile nav, hero role rotator, count-up gauges, scroll-reveal
 images/          # downloadable résumé PDF
 ```
 

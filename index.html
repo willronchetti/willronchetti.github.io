@@ -4,43 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="fsqjfqJuJ-EmX72QLYhUGze-leS01aYSm423zP2tuAg" />
-  <meta name="description" content="William Ronchetti — back-end and infrastructure engineer building secure, scalable AWS data platforms in Python at Novo Nordisk and Harvard Medical School." />
-  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="William Ronchetti — senior back-end and infrastructure engineer building secure, scalable AWS data platforms and LLM/RAG systems in Python at Novo Nordisk and Harvard Medical School." />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#efe8d8" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="William Ronchetti — Infrastructure & Back-End Engineer" />
-  <meta property="og:description" content="7+ years building secure, scalable AWS data platforms in Python. Novo Nordisk · Harvard Medical School." />
+  <meta property="og:title" content="William Ronchetti — Senior Backend & Infrastructure Engineer" />
+  <meta property="og:description" content="7+ years building secure, scalable AWS data platforms and LLM/RAG systems in Python. Novo Nordisk · Harvard Medical School." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://willronchetti.github.io" />
 
-  <title>William Ronchetti — Infrastructure & Back-End Engineer</title>
+  <title>William Ronchetti — Senior Backend & Infrastructure Engineer</title>
 
-  <!-- Inline SVG favicon: terminal prompt -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Cpath d='M8 11l5 5-5 5M16 21h8' stroke='%237ee787' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <!-- Inline SVG favicon: schematic node -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23efe8d8'/%3E%3Cpath d='M6 16h20M16 6v20' stroke='%23b9ad92' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='5.5' fill='none' stroke='%23c73418' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='1.6' fill='%23c73418'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- registration marks at the page corners -->
+  <span class="reg reg--tl" aria-hidden="true"></span>
+  <span class="reg reg--tr" aria-hidden="true"></span>
+  <span class="reg reg--bl" aria-hidden="true"></span>
+  <span class="reg reg--br" aria-hidden="true"></span>
+
   <!-- ===== Nav ===== -->
   <header class="nav" id="top">
-    <div class="nav__inner">
+    <div class="wrap nav__inner">
       <a class="nav__brand" href="#top" aria-label="Home">
-        <span class="nav__prompt">&gt;_</span>
-        <span class="nav__brand-text">william<span class="muted">@</span>infra</span>
+        <svg class="nav__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M6 16h20M16 6v20" stroke="currentColor" stroke-width="1" opacity=".4"/>
+          <circle cx="16" cy="16" r="6" fill="none" stroke="var(--accent)" stroke-width="2"/>
+          <circle cx="16" cy="16" r="1.8" fill="var(--accent)"/>
+        </svg>
+        <span class="nav__brand-text">W. Ronchetti</span>
       </a>
 
       <nav class="nav__links" id="nav-links" aria-label="Primary">
-        <a href="#about">about</a>
-        <a href="#experience">experience</a>
-        <a href="#work">work</a>
-        <a href="#community">community</a>
-        <a href="#contact">contact</a>
-        <a class="nav__resume" href="images/wrr_2026.pdf" target="_blank" rel="noopener">resume.pdf</a>
+        <a href="#about"><span class="nav__idx">01</span> about</a>
+        <a href="#experience"><span class="nav__idx">02</span> experience</a>
+        <a href="#work"><span class="nav__idx">03</span> work</a>
+        <a href="#education"><span class="nav__idx">04</span> education</a>
+        <a href="#community"><span class="nav__idx">05</span> off-hours</a>
+        <a class="nav__resume" href="images/wrr_2026.pdf" target="_blank" rel="noopener">résumé ↗</a>
       </nav>
 
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
@@ -53,215 +64,362 @@
 
     <!-- ===== Hero ===== -->
     <section class="hero" aria-labelledby="hero-name">
-      <div class="hero__inner">
-        <div class="terminal" role="presentation">
-          <div class="terminal__bar">
-            <span class="dot dot--red"></span>
-            <span class="dot dot--yellow"></span>
-            <span class="dot dot--green"></span>
-            <span class="terminal__title">william@infra: ~</span>
-          </div>
-          <div class="terminal__body">
-            <p class="term-line"><span class="term-prompt">william@infra:~$</span> whoami</p>
-            <p class="term-out" id="typed"></p>
-            <p class="term-line term-line--delay"><span class="term-prompt">william@infra:~$</span> cat about.txt</p>
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="plate">FIG. 00 — SYSTEM OVERVIEW</p>
+          <h1 class="hero__name" id="hero-name">William<br>Ronchetti</h1>
+          <p class="hero__role" id="hero-role" aria-live="polite">Senior backend &amp; infrastructure engineer</p>
+          <p class="hero__lede">
+            I build secure, scalable AWS data platforms in Python — the plumbing that moves
+            <strong>petabytes</strong> of research data from raw instrument output to something scientists can query,
+            and increasingly the <strong>LLM/RAG</strong> systems layered on top of it.
+          </p>
+          <dl class="specsheet" aria-label="At a glance">
+            <div><dt>Base</dt><dd>Alexandria, VA</dd></div>
+            <div><dt>Focus</dt><dd>IaC · data pipelines · LLM/RAG</dd></div>
+            <div><dt>Domain</dt><dd>Genomics &amp; omics platforms</dd></div>
+            <div><dt>Compliance</dt><dd>FISMA-Moderate · HIPAA · GDPR</dd></div>
+          </dl>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="images/wrr_2026.pdf" target="_blank" rel="noopener">Download résumé</a>
+            <a class="btn" href="mailto:wrr33@cornell.edu">Email</a>
+            <a class="btn" href="https://github.com/willronchetti" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/william-ronchetti-569839121/" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
-        <h1 class="hero__name" id="hero-name">William Ronchetti</h1>
-        <p class="hero__tagline">Back-end &amp; infrastructure engineer. I build secure, scalable AWS data platforms that move petabytes.</p>
-        <p class="hero__meta">
-          <span aria-hidden="true">◦</span> Alexandria, VA
-          <span aria-hidden="true">◦</span> M.Eng. Computer Science, Cornell
-        </p>
+        <!-- Pipeline schematic -->
+        <figure class="schematic" aria-labelledby="schematic-cap">
+          <svg id="pipeline" viewBox="0 0 320 520" role="img" aria-label="Data platform schematic: raw sources flow through ingest, validate, store, and serve stages, with an LLM/RAG retrieval layer on top and observability instrumenting the whole pipeline.">
+            <defs>
+              <marker id="arw" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0 0l6 3-6 3z" fill="var(--ink-soft)"/>
+              </marker>
+            </defs>
 
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="images/wrr_2026.pdf" target="_blank" rel="noopener">Download résumé</a>
-          <a class="btn" href="https://github.com/willronchetti" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/in/william-ronchetti-569839121/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="mailto:wrr33@cornell.edu">Email</a>
-        </div>
+            <!-- edges -->
+            <g class="sch__edges" stroke="var(--ink-soft)" stroke-width="1.4" fill="none" marker-end="url(#arw)">
+              <path class="wire" d="M160 78 V116"/>
+              <path class="wire" d="M160 158 V196"/>
+              <path class="wire" d="M160 238 V276"/>
+              <path class="wire" d="M160 318 V356"/>
+              <path class="wire" d="M160 398 V436"/>
+            </g>
+
+            <!-- flowing packets -->
+            <g class="packets" fill="var(--accent)">
+              <circle r="3.5"><animateMotion class="pkt" dur="4s" repeatCount="indefinite" path="M160 40 V480"/></circle>
+              <circle r="3.5"><animateMotion class="pkt" dur="4s" begin="1.3s" repeatCount="indefinite" path="M160 40 V480"/></circle>
+              <circle r="3.5"><animateMotion class="pkt" dur="4s" begin="2.6s" repeatCount="indefinite" path="M160 40 V480"/></circle>
+            </g>
+
+            <!-- nodes -->
+            <g class="sch__nodes" font-family="var(--mono)">
+              <g class="node">
+                <rect x="60" y="42" width="200" height="36" rx="4"/>
+                <text x="160" y="60" class="node__t">RAW SOURCES</text>
+                <text x="160" y="72" class="node__s">vendors · CROs · PDFs</text>
+              </g>
+              <g class="node">
+                <rect x="60" y="122" width="200" height="36" rx="4"/>
+                <text x="160" y="140" class="node__t">INGEST</text>
+                <text x="160" y="152" class="node__s">Lambda · Glue · Batch</text>
+              </g>
+              <g class="node">
+                <rect x="60" y="202" width="200" height="36" rx="4"/>
+                <text x="160" y="220" class="node__t">VALIDATE + MODEL</text>
+                <text x="160" y="232" class="node__s">Parquet · Athena</text>
+              </g>
+              <g class="node">
+                <rect x="60" y="282" width="200" height="36" rx="4"/>
+                <text x="160" y="300" class="node__t">STORE + INDEX</text>
+                <text x="160" y="312" class="node__s">Postgres · Elastic · vectors</text>
+              </g>
+              <g class="node">
+                <rect x="60" y="362" width="200" height="36" rx="4"/>
+                <text x="160" y="380" class="node__t">SERVE</text>
+                <text x="160" y="392" class="node__s">ECS Fargate · Nginx · API</text>
+              </g>
+              <g class="node node--out">
+                <rect x="60" y="442" width="200" height="36" rx="4"/>
+                <text x="160" y="460" class="node__t">RAG / LLM</text>
+                <text x="160" y="472" class="node__s">Bedrock · vector + text-to-SQL</text>
+              </g>
+            </g>
+
+            <!-- side annotation -->
+            <g class="sch__ann" font-family="var(--mono)" stroke="var(--rule)">
+              <line x1="260" y1="140" x2="292" y2="140"/>
+              <line x1="292" y1="140" x2="292" y2="460"/>
+              <line x1="260" y1="460" x2="292" y2="460"/>
+            </g>
+            <text x="300" y="300" class="ann__t" font-family="var(--mono)" transform="rotate(90 300 300)">observability · Splunk HEC</text>
+          </svg>
+          <figcaption id="schematic-cap" class="schematic__cap">The shape of most of my work: ingest &rarr; validate &rarr; store &rarr; serve, now with an LLM/RAG layer on top — instrumented end to end.</figcaption>
+        </figure>
       </div>
     </section>
 
     <!-- ===== About ===== -->
-    <section class="section reveal" id="about" aria-labelledby="about-h">
-      <div class="section__head">
+    <section class="section" id="about" aria-labelledby="about-h">
+      <header class="section__head">
         <span class="section__num">01</span>
-        <h2 class="section__title" id="about-h">about</h2>
-      </div>
-      <div class="about">
-        <p>
-          I'm a back-end and infrastructure software engineer with <strong>7+ years</strong> building secure,
-          scalable AWS data platforms in Python. My work lives where research data meets production
-          infrastructure — turning organically grown systems into reproducible, audited, compliant platforms.
-        </p>
-        <p>
-          My strengths are infrastructure-as-code, API and database performance optimization, container-based
-          deployments, and observability — delivering <strong>FISMA-Moderate</strong> and <strong>GDPR-compliant</strong>
-          systems that have passed multiple independent security audits.
-        </p>
-        <ul class="stats">
-          <li><span class="stats__num">7+</span><span class="stats__label">years building<br>data platforms</span></li>
-          <li><span class="stats__num">PB</span><span class="stats__label">scale data<br>under management</span></li>
-          <li><span class="stats__num">5</span><span class="stats__label">peer-reviewed<br>publications</span></li>
-          <li><span class="stats__num">267</span><span class="stats__label">citations<br>across that work</span></li>
+        <h2 class="section__title" id="about-h">About</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="about wrap-reveal">
+        <div class="about__prose">
+          <p>
+            I'm a back-end and infrastructure engineer with <strong>7+ years</strong> living where research
+            data meets production infrastructure. The recurring theme of my career: taking systems that grew
+            organically — the ones held together by tribal knowledge and a few brave shell scripts — and turning
+            them into reproducible, audited, compliant platforms.
+          </p>
+          <p>
+            My strengths are infrastructure-as-code, API and database performance optimization, container-based
+            deployments, and observability. I've delivered <strong>FISMA-Moderate</strong>, <strong>HIPAA</strong>, and
+            <strong>GDPR-compliant</strong> systems that have passed multiple independent security audits, and I care
+            as much about the engineers using the platform as the platform itself.
+          </p>
+          <p>
+            Lately that work has grown upward into <strong>LLM/RAG systems</strong> — a document-intelligence pipeline
+            that reads thousands of scientific reports and answers questions over them with hybrid retrieval on AWS
+            Bedrock, backed by a PHI de-identification layer so it can touch sensitive data safely.
+          </p>
+        </div>
+
+        <ul class="gauges" aria-label="Career at a glance">
+          <li class="gauge">
+            <span class="gauge__num" data-count="7" data-suffix="+">7+</span>
+            <span class="gauge__label">years building<br>data platforms</span>
+          </li>
+          <li class="gauge">
+            <span class="gauge__num">PB</span>
+            <span class="gauge__label">scale of data<br>under management</span>
+          </li>
+          <li class="gauge">
+            <span class="gauge__num" data-count="5">5</span>
+            <span class="gauge__label">peer-reviewed<br>publications</span>
+          </li>
+          <li class="gauge">
+            <span class="gauge__num" data-count="267">267</span>
+            <span class="gauge__label">citations across<br>that work</span>
+          </li>
         </ul>
       </div>
     </section>
 
     <!-- ===== Experience ===== -->
-    <section class="section reveal" id="experience" aria-labelledby="exp-h">
-      <div class="section__head">
+    <section class="section" id="experience" aria-labelledby="exp-h">
+      <header class="section__head">
         <span class="section__num">02</span>
-        <h2 class="section__title" id="exp-h">experience</h2>
-      </div>
+        <h2 class="section__title" id="exp-h">Experience</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
 
       <ol class="timeline">
-        <li class="job">
-          <div class="job__head">
-            <h3 class="job__role">Data Product Engineer</h3>
-            <span class="job__when">Sept 2024 — Present</span>
+        <li class="job wrap-reveal">
+          <div class="job__spine" aria-hidden="true"><span class="job__dot"></span></div>
+          <div class="job__body">
+            <div class="job__head">
+              <div>
+                <h3 class="job__role">Data Product Engineer</h3>
+                <p class="job__org">Novo Nordisk <span class="muted">· contract · Remote</span></p>
+              </div>
+              <span class="job__when">Sept 2024 — Present</span>
+            </div>
+            <ul class="job__points">
+              <li>Lead backend engineer for the <strong>Omics Platform</strong>, an internal AWS system managing petabytes of diverse omics data for dozens of research teams — cataloguing and analysis alike.</li>
+              <li>Built an <strong>LLM-based document intelligence system</strong> that ingests thousands of scientific PDF reports (born-digital and scanned), extracts structured data, and serves a chat agent over a hybrid retrieval architecture combining <strong>vector search and text-to-SQL on AWS Bedrock</strong>.</li>
+              <li>Designed a two-zone <strong>PHI de-identification pipeline</strong> to meet HIPAA requirements — enabling LLM processing of sensitive documents with small-cell suppression and controlled re-identification.</li>
+              <li>Built a highly scalable ingestion pipeline on <strong>Lambda, Glue, and Batch</strong> for validation and transfer of raw data and discovery metadata across several dozen vendors/CROs.</li>
+              <li>Designed a <strong>Parquet/Athena</strong> metadata model for tracking diverse omics datasets, cutting dataset onboarding and discovery time for research teams.</li>
+              <li>Review code and mentor a small team on software, cloud-engineering, and security best practices to ensure GDPR compliance.</li>
+            </ul>
+            <ul class="tags"><li>AWS Bedrock</li><li>RAG</li><li>text-to-SQL</li><li>Lambda</li><li>Glue</li><li>Batch</li><li>Athena</li><li>HIPAA</li></ul>
           </div>
-          <p class="job__org">Novo Nordisk <span class="muted">(via Kelly Services Global)</span> · Remote</p>
-          <ul class="job__points">
-            <li>Spearhead development of the <strong>Omics Platform</strong>, an internal AWS system managing petabytes of diverse omics data for dozens of research teams — both cataloguing and analysis.</li>
-            <li>Built a highly scalable ingestion pipeline on <strong>Lambda, Glue, and Batch</strong> for validation and transfer of raw data and discovery metadata across several dozen vendors/CROs.</li>
-            <li>Designed a metadata model for tracking diverse omics datasets using <strong>Parquet and Amazon Athena</strong>.</li>
-            <li>Review code and mentor a small team on software, cloud-engineering, and security best practices to ensure GDPR compliance.</li>
-          </ul>
-          <ul class="tags">
-            <li>AWS Lambda</li><li>Glue</li><li>Batch</li><li>Parquet</li><li>Athena</li><li>Python</li>
-          </ul>
         </li>
 
-        <li class="job">
-          <div class="job__head">
-            <h3 class="job__role">Senior Software Engineer</h3>
-            <span class="job__when">Aug 2019 — Present</span>
+        <li class="job wrap-reveal">
+          <div class="job__spine" aria-hidden="true"><span class="job__dot"></span></div>
+          <div class="job__body">
+            <div class="job__head">
+              <div>
+                <h3 class="job__role">Senior Software Engineer</h3>
+                <p class="job__org">Harvard Medical School <span class="muted">· Dept. of Biomedical Informatics · Remote / Boston, MA</span></p>
+              </div>
+              <span class="job__when">Aug 2019 — Present</span>
+            </div>
+            <p class="job__note">Senior since 2022 · half-time since Jan 2025 · previously Software Engineer</p>
+            <ul class="job__points">
+              <li>Lead back-end development in Python for the <strong>CGAP, 4DN, and SMaHT</strong> data platforms, supporting petabytes of raw data and associated metadata.</li>
+              <li>Refactored complex, organically grown AWS infrastructure into reproducible <strong>infrastructure-as-code (CloudFormation)</strong>, achieving FISMA-Moderate compliance and passing multiple independent security audits — with workflows for promptly resolving vulnerabilities.</li>
+              <li>Migrated the web platform from Apache on Elastic Beanstalk to <strong>Nginx on ECS Fargate</strong>, cutting compute costs by <strong>50%</strong> with configurable autoscaling in response to traffic.</li>
+              <li>Implemented observability with structured event logging via a <strong>Splunk HEC</strong> pipeline and container log shipping through FireLens / Fluent Bit.</li>
+              <li>Optimized Postgres and Elasticsearch query performance by resolving aggregation timeouts from large terms filters — <strong>50% faster</strong> responses.</li>
+              <li>Devised and implemented advanced security protocols — encryption, secrets management, access controls — and mentored junior engineers and domain experts on feature development and code review.</li>
+            </ul>
+            <ul class="tags"><li>CloudFormation</li><li>ECS Fargate</li><li>Nginx</li><li>PostgreSQL</li><li>Elasticsearch</li><li>Splunk</li><li>FISMA</li></ul>
           </div>
-          <p class="job__org">Harvard Medical School — Dept. of Biomedical Informatics · Remote / Boston, MA</p>
-          <p class="job__note muted">Senior since 2022 (half-time since Jan 2025) — previously Software Engineer</p>
-          <ul class="job__points">
-            <li>Lead back-end development in Python for the <strong>CGAP, 4DN, and SMaHT</strong> data platforms, supporting petabytes of raw data and associated metadata.</li>
-            <li>Refactored complex, organically grown AWS infrastructure into reproducible <strong>infrastructure-as-code (CloudFormation)</strong>, achieving FISMA-Moderate compliance and passing multiple independent security audits.</li>
-            <li>Migrated the web platform from Apache on Elastic Beanstalk to <strong>Nginx on ECS Fargate</strong>, cutting compute costs by <strong>50%</strong> with configurable autoscaling.</li>
-            <li>Implemented observability with structured event logging via a <strong>Splunk HEC</strong> pipeline and container log shipping through FireLens / Fluent Bit.</li>
-            <li>Optimized Postgres and Elasticsearch query performance by resolving aggregation timeouts from large terms filters — <strong>50% faster</strong> responses.</li>
-          </ul>
-          <ul class="tags">
-            <li>CloudFormation</li><li>ECS Fargate</li><li>Nginx</li><li>PostgreSQL</li><li>Elasticsearch</li><li>Splunk</li><li>FISMA</li>
-          </ul>
         </li>
 
-        <li class="job">
-          <div class="job__head">
-            <h3 class="job__role">Associate in Research <span class="muted">(part-time)</span></h3>
-            <span class="job__when">Feb 2019 — Present</span>
+        <li class="job wrap-reveal">
+          <div class="job__spine" aria-hidden="true"><span class="job__dot"></span></div>
+          <div class="job__body">
+            <div class="job__head">
+              <div>
+                <h3 class="job__role">Associate in Research <span class="muted">(part-time)</span></h3>
+                <p class="job__org">Duke University <span class="muted">· Dept. of Electrical &amp; Computer Engineering · Durham, NC</span></p>
+              </div>
+              <span class="job__when">Feb 2019 — Present</span>
+            </div>
+            <ul class="job__points">
+              <li>Develop assignments for an advanced C++ course and improve introductory C programming assignments on Coursera; support students with C and Python coursework.</li>
+            </ul>
           </div>
-          <p class="job__org">Duke University — Dept. of Electrical &amp; Computer Engineering · Durham, NC</p>
-          <ul class="job__points">
-            <li>Develop assignments for an advanced C++ course and improve introductory C programming assignments on Coursera; support students with C and Python coursework.</li>
-          </ul>
         </li>
 
-        <li class="job">
-          <div class="job__head">
-            <h3 class="job__role">Teaching Assistant <span class="muted">(part-time)</span></h3>
-            <span class="job__when">Aug 2016 — Dec 2018</span>
+        <li class="job wrap-reveal">
+          <div class="job__spine" aria-hidden="true"><span class="job__dot"></span></div>
+          <div class="job__body">
+            <div class="job__head">
+              <div>
+                <h3 class="job__role">Teaching Assistant <span class="muted">(part-time)</span></h3>
+                <p class="job__org">Cornell University <span class="muted">· Ithaca, NY</span></p>
+              </div>
+              <span class="job__when">Aug 2016 — Dec 2018</span>
+            </div>
+            <ul class="job__points">
+              <li>Taught Operating Systems (CS 4410/4411) and System Security (CS 5430/5431) with practicum sections; built and improved C autograders and graded exams.</li>
+            </ul>
           </div>
-          <p class="job__org">Cornell University · Ithaca, NY</p>
-          <ul class="job__points">
-            <li>Taught Operating Systems (CS 4410/4411) and System Security (CS 5430/5431) with practicum sections; built and improved C autograders and graded exams.</li>
-          </ul>
         </li>
       </ol>
     </section>
 
-    <!-- ===== Selected work / publications ===== -->
-    <section class="section reveal" id="work" aria-labelledby="work-h">
-      <div class="section__head">
+    <!-- ===== Selected work / publications + stack ===== -->
+    <section class="section" id="work" aria-labelledby="work-h">
+      <header class="section__head">
         <span class="section__num">03</span>
-        <h2 class="section__title" id="work-h">selected work</h2>
-      </div>
-      <p class="section__lead">
-        Co-author on <strong>5 peer-reviewed publications</strong> for data-platform and pipeline contributions, with
-        <strong>267 citations</strong>. Selected highlights:
+        <h2 class="section__title" id="work-h">Selected Work</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <p class="section__lead wrap-reveal">
+        Co-author on <strong>5 peer-reviewed publications</strong> for data-platform and pipeline contributions,
+        with <strong>267 citations</strong>. Selected highlights:
       </p>
-      <ul class="pubs">
+
+      <ul class="pubs wrap-reveal">
         <li class="pub">
           <a href="https://www.nature.com/articles/s41586-025-09096-7" target="_blank" rel="noopener">
+            <span class="pub__ref">REF-01</span>
             <span class="pub__title">The Somatic Mosaicism across Human Tissues Network</span>
-            <span class="pub__meta"><em>Nature</em> · 2025</span>
+            <span class="pub__meta"><em>Nature</em> · 2025 <span class="pub__go" aria-hidden="true">↗</span></span>
           </a>
         </li>
         <li class="pub">
           <a href="https://www.nature.com/articles/s41586-025-09890-3" target="_blank" rel="noopener">
+            <span class="pub__ref">REF-02</span>
             <span class="pub__title">An integrated view of the structure and function of the human 4D nucleome</span>
-            <span class="pub__meta"><em>Nature</em> · 2025</span>
+            <span class="pub__meta"><em>Nature</em> · 2025 <span class="pub__go" aria-hidden="true">↗</span></span>
           </a>
         </li>
         <li class="pub">
           <a href="https://www.nature.com/articles/s41467-025-61712-2" target="_blank" rel="noopener">
+            <span class="pub__ref">REF-03</span>
             <span class="pub__title">Joint, multifaceted genomic analysis enables diagnosis of diverse, ultra-rare monogenic presentations</span>
-            <span class="pub__meta"><em>Nature Communications</em> · 2025</span>
+            <span class="pub__meta"><em>Nature Communications</em> · 2025 <span class="pub__go" aria-hidden="true">↗</span></span>
           </a>
         </li>
         <li class="pub">
           <a href="https://www.nature.com/articles/s41467-022-29697-4" target="_blank" rel="noopener">
+            <span class="pub__ref">REF-04</span>
             <span class="pub__title">The 4D Nucleome Data Portal as a resource for searching and visualizing curated nucleomics data</span>
-            <span class="pub__meta"><em>Nature Communications</em> · 2022</span>
+            <span class="pub__meta"><em>Nature Communications</em> · 2022 <span class="pub__go" aria-hidden="true">↗</span></span>
           </a>
         </li>
       </ul>
 
-      <div class="section__head section__head--sub">
-        <h3 class="section__subtitle">stack</h3>
-      </div>
-      <div class="skills">
+      <header class="section__head section__head--sub wrap-reveal">
+        <h3 class="section__subtitle">Stack</h3>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="skills wrap-reveal">
         <div class="skill">
-          <h4 class="skill__cat">// languages</h4>
-          <p>Python · C/C++ · Java · OCaml · SQL</p>
+          <h4 class="skill__cat">Languages</h4>
+          <p>Python · SQL · C/C++</p>
         </div>
         <div class="skill">
-          <h4 class="skill__cat">// infrastructure &amp; IaC</h4>
-          <p>CloudFormation · VPC · EC2 · ECS (Fargate) · ECR · Elastic Beanstalk · Lambda · Batch · Step Functions · API Gateway · Route 53 · Docker · Nginx · Apache</p>
+          <h4 class="skill__cat">Backend &amp; Data</h4>
+          <p>PostgreSQL (RDS) · Elasticsearch / Lucene · Redis · DynamoDB · Amazon Athena · S3 · Parquet · Kafka · SQS · Pyramid · Flask · boto3 · SQLAlchemy · pytest</p>
         </div>
         <div class="skill">
-          <h4 class="skill__cat">// data &amp; storage</h4>
-          <p>PostgreSQL (RDS) · Elasticsearch · DynamoDB · Amazon Athena · S3 · Parquet</p>
+          <h4 class="skill__cat">AI / LLM</h4>
+          <p>AWS Bedrock · retrieval-augmented generation (RAG) · vector search · text-to-SQL · embeddings · PHI de-identification</p>
         </div>
         <div class="skill">
-          <h4 class="skill__cat">// observability &amp; CI/CD</h4>
-          <p>CloudWatch · Splunk (HEC) · Fluent Bit / FireLens · Sentry · GitHub Actions · Travis CI · ReadTheDocs</p>
+          <h4 class="skill__cat">Infrastructure &amp; IaC</h4>
+          <p>CloudFormation (Troposphere) · Terraform · VPC · EC2 · ECS (Fargate) · ECR · Lambda · Batch · Step Functions · API Gateway · Route 53 · Elastic Beanstalk · Docker · Nginx · Apache</p>
         </div>
         <div class="skill">
-          <h4 class="skill__cat">// security</h4>
-          <p>AWS KMS · Secrets Manager · Security Hub · ACM · FISMA-Moderate · GDPR</p>
+          <h4 class="skill__cat">Observability &amp; CI/CD</h4>
+          <p>CloudWatch · Splunk (HEC) · Fluent Bit / FireLens · Sentry · GitHub Actions · Travis CI</p>
         </div>
         <div class="skill">
-          <h4 class="skill__cat">// scientific pipelines</h4>
+          <h4 class="skill__cat">Security &amp; Compliance</h4>
+          <p>AWS KMS · Secrets Manager · Security Hub · ACM · FISMA-Moderate · HIPAA · GDPR</p>
+        </div>
+        <div class="skill">
+          <h4 class="skill__cat">Scientific Pipelines</h4>
           <p>Nextflow · Seqera</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== Community & athletics ===== -->
-    <section class="section reveal" id="community" aria-labelledby="comm-h">
-      <div class="section__head">
+    <!-- ===== Education ===== -->
+    <section class="section" id="education" aria-labelledby="edu-h">
+      <header class="section__head">
         <span class="section__num">04</span>
-        <h2 class="section__title" id="comm-h">community &amp; athletics</h2>
+        <h2 class="section__title" id="edu-h">Education</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="edu wrap-reveal">
+        <article class="edu__card">
+          <p class="edu__school">Cornell University <span class="muted">· Ithaca, NY</span></p>
+          <ul class="edu__degrees">
+            <li><span class="edu__deg">M.Eng., Computer Science</span><span class="edu__meta">GPA 3.69 · Dec 2018</span></li>
+            <li><span class="edu__deg">B.A., Computer Science</span><span class="edu__meta">GPA 3.43 · May 2018</span></li>
+          </ul>
+          <p class="edu__extra">Varsity Cross Country, Indoor &amp; Outdoor Track · Association of Computer Science Undergraduates.</p>
+        </article>
       </div>
-      <div class="cards">
+    </section>
+
+    <!-- ===== Off-hours ===== -->
+    <section class="section" id="community" aria-labelledby="comm-h">
+      <header class="section__head">
+        <span class="section__num">05</span>
+        <h2 class="section__title" id="comm-h">Off-Hours</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </header>
+
+      <div class="cards wrap-reveal">
         <article class="card">
+          <span class="card__icon" aria-hidden="true">⌁</span>
           <h3 class="card__title">Coaching</h3>
           <p>Assistant Cross-Country and Track &amp; Field coach at <strong>Arlington Public Schools (Yorktown)</strong> — helping the next generation of distance runners train, race, and stick with the sport.</p>
         </article>
         <article class="card">
+          <span class="card__icon" aria-hidden="true">❖</span>
           <h3 class="card__title">Volunteering</h3>
-          <p>Volunteer with <strong>Virginia German Shepherd Rescue</strong> and the <strong>Lost Dog &amp; Cat Rescue Foundation</strong>, supporting fostering and adoption efforts.</p>
+          <p>Volunteer with <strong>Virginia German Shepherd Rescue</strong> and the <strong>Lost Dog &amp; Cat Rescue Foundation</strong>, supporting fostering and adoption.</p>
         </article>
         <article class="card">
+          <span class="card__icon" aria-hidden="true">△</span>
           <h3 class="card__title">Running</h3>
           <p>Varsity Cross Country and Indoor &amp; Outdoor Track at <strong>Cornell</strong>. A lifelong endurance athlete — the same patience and consistency I bring to long-running systems work.</p>
         </article>
@@ -272,9 +430,9 @@
 
   <!-- ===== Footer / contact ===== -->
   <footer class="footer" id="contact">
-    <div class="footer__inner">
+    <div class="wrap footer__inner">
       <div class="footer__cta">
-        <p class="term-prompt">william@infra:~$ ./contact --me</p>
+        <p class="plate">FIG. 06 — CONTACT</p>
         <h2 class="footer__title">Let's build something durable.</h2>
         <p class="footer__text">Open to back-end and infrastructure roles. The fastest way to reach me is email or LinkedIn.</p>
         <div class="footer__links">
@@ -287,9 +445,9 @@
 
       <div class="footer__note">
         <p class="muted">
-          <strong>On this site:</strong> the UI was designed and built with the help of AI tooling — a deliberate
-          experiment in augmenting my skills into a domain (front-end &amp; design) outside my day-to-day. The
-          engineering work it describes is entirely my own.
+          <strong>On this site:</strong> the visual design and front-end were built with the help of AI
+          tooling — a deliberate experiment in extending my skills into a domain (front-end &amp; design) outside
+          my day-to-day. The engineering work it describes is entirely my own.
         </p>
         <p class="muted footer__colophon">
           Hand-tuned static HTML/CSS/JS · no frameworks · served from GitHub Pages ·
