@@ -7,6 +7,7 @@ A single-page portfolio for a back-end / infrastructure engineer, styled as an
 diagram, and plate-numbered sections. Hand-tuned static **HTML / CSS / JS** — no frameworks,
 no build step. Committing to `master` deploys it directly via GitHub Pages.
 
+
 ## Structure
 
 ```
