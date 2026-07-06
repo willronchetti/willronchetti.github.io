@@ -1,11 +1,11 @@
 /* ===========================================================
-   William Ronchetti — personal site
+   William Ronchetti: personal site
    "Engineering schematic on drafting paper."
    Hand-tuned, no framework.
    =========================================================== */
 
 :root {
-  /* palette — warm drafting paper + ink + one plotter-pen accent */
+  /* palette: warm drafting paper + ink + one plotter-pen accent */
   --paper:     #efe8d8;
   --paper-2:   #e7dfcc;
   --card:      #f6f1e6;

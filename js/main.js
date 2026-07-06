@@ -1,4 +1,4 @@
-/* William Ronchetti — site interactions. Vanilla JS, no dependencies. */
+/* William Ronchetti: site interactions. Vanilla JS, no dependencies. */
 (function () {
   "use strict";
 
